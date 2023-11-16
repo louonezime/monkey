@@ -8,7 +8,7 @@ Make sure you have Node.js and npm installed on your machine.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/type-tier.git
+   git clone https://github.com/louonezime/type-tier.git
    ```
 
 2. Navigate to the project folder
@@ -19,17 +19,4 @@ Make sure you have Node.js and npm installed on your machine.
 3. Install dependencies
     ```bash
     npm install
-    ```
-
-## Usage
-In the project directory, you can run:
-
-Runs the app in development mode
-    ```bash
-    npm start
-    ```
-
-Builds the app for production
-    ```bash
-    npm build
     ```
