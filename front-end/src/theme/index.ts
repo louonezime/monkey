@@ -1,6 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
 
-// Set breakpoint to help to make the app responsive.
 const breakpoints = {
 	xs: '320px',
 	sm: '576px',

@@ -1,12 +1,11 @@
-import { Center, Text, VStack } from '@chakra-ui/react';
+import AppRoutes from "./Routes";
 
-const App = (): JSX.Element => (
-	<Center mt="160px">
-		<VStack spacing="32px">
-			<Text fontSize='6xl' as='b'>type tier</Text>
-			<Text fontSize='xl' as='i'>test your typing speed</Text>
-		</VStack>
-	</Center>
-);
+const App = (): JSX.Element => {
+	return (
+		<>
+			<AppRoutes/>
+		</>
+	);
+}
 
 export default App;
