@@ -1,9 +1,9 @@
 import { Center, Text, VStack } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 
-import { Canvas } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber';
 
-import Box from './HomePage/Cubes'
+import Box from './HomePage/Cubes';
 
 const HomePage = () : ReactElement => {
     return (

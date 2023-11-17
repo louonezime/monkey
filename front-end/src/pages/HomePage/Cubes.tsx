@@ -13,10 +13,11 @@ const Box = (props: ThreeElements['mesh']) => {
     <mesh
       {...props}
       ref={ref}
-      scale={clicked ? 1.5 : 1}
+      scale={clicked ? 1.3 : 1}
       onClick={() => click(!clicked)}
       onPointerOver={() => hover(true)}
       onPointerOut={() => hover(false)}>
+
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={hovered ? 'red' : 'black'} />
     </mesh>
