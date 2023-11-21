@@ -1,16 +1,31 @@
-import { Center, Text, VStack } from '@chakra-ui/react';
-import { ReactElement } from 'react';
+import { Center, Text, VStack, Button } from '@chakra-ui/react';
+import { ReactElement, useState } from 'react';
 
 import { Canvas } from '@react-three/fiber';
 
 import Box from './HomePage/Cubes';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () : ReactElement => {
+    const navigate = useNavigate();
+    const [hovered, hover] = useState(false);
+
+    const navigateToGame = () => {
+        navigate('/start');
+    };
+
     return (
         <Center mt="300px">
-            <VStack spacing="10px">
-                <Text fontSize='6xl' as='b'>type tier</Text>
-                <Text fontSize='xl'>test your typing speed</Text>
+            <VStack spacing="1px">
+                <Text
+                    onMouseEnter={() => hover(true)}
+                    onMouseLeave={() => hover(false)}
+                    color={hovered ? 'darkred' : 'black'}
+                    fontSize='6xl' as='b'>
+                        type tier</Text>
+                <Button onClick={navigateToGame} variant='link' fontSize='xl' color='darkred'>
+                    test your typing speed
+                </Button>
             </VStack>
             <VStack spacing="32px">
             <Canvas>

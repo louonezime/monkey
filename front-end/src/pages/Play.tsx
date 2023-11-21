@@ -12,7 +12,7 @@ const Start = () : ReactElement => {
         <Center mt="400px">
             <Stack spacing={3}>
                 <Text align='center' fontSize='xl'>{text}</Text>
-                <Input variant='flushed' onChange={handleInputChange} value={text}/>
+                <Input variant='flushed' focusBorderColor='darkred' onChange={handleInputChange} value={text}/>
             </Stack>
         </Center>
     );
