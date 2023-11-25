@@ -15,8 +15,19 @@ Make sure you have Node.js and npm installed on your machine.
     ```bash
     cd type-tier
     ```
-
 3. Install dependencies
     ```bash
     npm install
     ```
+
+## Usage
+
+Runs the app in development mode:
+```bash
+npm start
+```
+
+Builds the app for production:
+```bash
+npm build
+```
