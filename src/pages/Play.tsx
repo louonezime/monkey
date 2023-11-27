@@ -1,9 +1,12 @@
-import { Center, Input, Text, Stack, Button, Progress } from '@chakra-ui/react';
+import { VStack, Center, Input, Text, Stack, Button, Progress } from '@chakra-ui/react';
 import { ReactElement, useState, useRef, useEffect,  } from 'react';
 import { MdOutlineRestartAlt } from "react-icons/md";
+
 import * as txtgen from 'txtgen';
 
-const Start = (): ReactElement => {
+import ThreeDots from './assets/Cubes';
+
+const InputStart = (): ReactElement => {
     const [text, setText] = useState('');
     const [generatedText, setGeneratedText] = useState('');
     const [startTime, setStartTime] = useState<number | null>(null);
@@ -44,7 +47,6 @@ const Start = (): ReactElement => {
     };
 
     return (
-        <Center mt="300px">
         <Stack spacing={5} align="center">
             <Text align="center" fontSize="xl">
             {generatedText.split('').map((char, index) => (
@@ -64,17 +66,27 @@ const Start = (): ReactElement => {
                 />
             <Progress value={progress} />
             <Text>{feedback}</Text>
-                <Button
-                    leftIcon={<MdOutlineRestartAlt />}
-                    variant='link'
-                    fontSize='xl'
-                    color='darkred'
-                    onClick={startGame}>
-                    Start Typing Test
-                </Button>
-            </Stack>
+            <Button
+                leftIcon={<MdOutlineRestartAlt />}
+                variant='link'
+                fontSize='xl'
+                color='darkred'
+                onClick={startGame}>
+                Start Typing
+            </Button>
+        </Stack>
+    );
+};
+
+const Start = (): ReactElement => {
+    return (
+        <Center mt="220px">
+            <VStack>
+                <ThreeDots />
+                <InputStart />
+            </VStack>
         </Center>
     );
-    };
+};
 
 export default Start;

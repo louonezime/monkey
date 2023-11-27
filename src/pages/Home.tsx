@@ -1,22 +1,8 @@
-import { Center, Text, VStack, Button } from '@chakra-ui/react';
+import { Center, Text, VStack, Button, HStack } from '@chakra-ui/react';
 import { ReactElement, useState } from 'react';
-
-import { Canvas } from '@react-three/fiber';
-
-import Box from './HomePage/Cubes';
 import { useNavigate } from 'react-router-dom';
 
-const ThreeDots = () : ReactElement => {
-    return (
-        <Canvas>
-            <ambientLight />
-            <pointLight position={[10, 10, 10]} />
-            <Box position={[-2.0, 0, 0]} />
-            <Box position={[0.0, 0, 0]} />
-            <Box position={[2.0, 0, 0]} />
-        </Canvas>
-    );
-}
+import ThreeDots from './assets/Cubes';
 
 const Title = () : ReactElement => {
     const [hovered, hover] = useState(false);
@@ -47,13 +33,14 @@ const Title = () : ReactElement => {
 }
 
 const HomePage = () : ReactElement => {
-
     return (
         <Center mt="220px">
-            <Title />
-            <VStack spacing='1'>
-                <ThreeDots />
-            </VStack>
+            <HStack>
+                <Title />
+                <VStack spacing='1'>
+                    <ThreeDots />
+                </VStack>
+            </HStack>
         </Center>
     );
 }

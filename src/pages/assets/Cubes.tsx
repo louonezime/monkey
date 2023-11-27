@@ -1,6 +1,7 @@
-import { useRef, useState } from 'react';
-import { useFrame, ThreeElements } from '@react-three/fiber';
+import { useRef, useState, ReactElement } from 'react';
+
 import * as THREE from 'three';
+import { useFrame, ThreeElements, Canvas } from '@react-three/fiber';
 
 const Box = (props: ThreeElements['mesh']) => {
   const ref = useRef<THREE.Mesh>(null!);
@@ -25,4 +26,16 @@ const Box = (props: ThreeElements['mesh']) => {
   );
 };
 
-export default Box;
+const ThreeDots = () : ReactElement => {
+  return (
+      <Canvas>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <Box position={[-2.0, 0, 0]} />
+          <Box position={[0.0, 0, 0]} />
+          <Box position={[2.0, 0, 0]} />
+      </Canvas>
+  );
+}
+
+export default ThreeDots;
